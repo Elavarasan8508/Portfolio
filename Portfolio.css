@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(background_img.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.tran-box {
+    position: relative; /* Add this to make absolute positioning work relative to the box */
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    margin: 60px 20px 20px; /* Added top margin for social icons */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px 20px; /* Added top padding for social icons */
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(79, 79, 79, 0.3);
+}
+
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 20px 0;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    margin: 10px 0;
+    background: linear-gradient(45deg, #e9ccd3, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #ddd;
+    font-family: 'Arial', sans-serif;
+    animation: pulse 3s infinite ease-in-out;
+    margin: 10px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Updated Social Icons Positioning */
+.social {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    width: auto;
+    margin: 0;
+    z-index: 10;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.resume {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s, background-color 0.3s;
+    margin: 10px 0;
+}
+
+/* Media Queries for different screen sizes */
+@media (min-width: 600px) {
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .name {
+        font-size: 3rem;
+    }
+    
+    .tagline {
+        font-size: 1.5rem;
+    }
+    
+    .social {
+        gap: 10px;
+    }
+    
+    .social img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .resume {
+        font-size: 1.5rem;
+        padding: 20px 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .profile-img {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .name {
+        font-size: 3.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.8rem;
+    }
+    
+    .social {
+        gap: 150px;
+    }
+    
+    .social img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .resume {
+        font-size: 2rem;
+    }
+}
+
+/* Keep your existing pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: #f4a7f2;
+        text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    }
+    25% {
+        transform: scale(1.1);
+        color: #fd9b8a;
+        text-shadow: 3px 5px 6px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        transform: scale(1);
+        color: #f2e679;
+        text-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
+    }
+    75% {
+        transform: scale(0.9);
+        color: #9de8fc;
+        text-shadow: 3px 5px 6px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: scale(1);
+        color: #f0819b;
+        text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    }
+}

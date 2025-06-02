@@ -1,0 +1,442 @@
+/*================================================================================
+  GLOBAL RESET & BASE STYLES
+================================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.4;
+}
+
+/*================================================================================
+  SECTION HEADERS (the grey strip with section title)
+================================================================================*/
+.section-header {
+  width: 100%;
+  background-color: #aabab9;
+  color: #3d3d3d;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*================================================================================
+  PROFILE SECTION
+================================================================================*/
+.profile-section {
+  background-color: #6d6d6d;
+  padding: 40px 20px;
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.name {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*================================================================================
+  LANGUAGES SECTION
+================================================================================*/
+.lang-section {
+  margin-top: 30px;
+}
+
+.lang-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.lang-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-icon {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lang-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.lang-label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #202020;
+  text-align: center;
+}
+
+/*================================================================================
+  ACADEMICS SECTION
+================================================================================*/
+.academics-section {
+  margin-top: 30px;
+}
+
+.academic-items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.academic-item {
+  /* each academic block: icon + text below */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 220px;
+}
+
+.academic-icon {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.academic-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.academic-text {
+  text-align: center;
+}
+
+.acad-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #202020;
+  margin-bottom: 4px;
+}
+
+.acad-location,
+.acad-result {
+  font-size: 1rem;
+  color: #202020;
+}
+
+/*================================================================================
+  SOFT SKILLS SECTION
+================================================================================*/
+.softskills-section {
+  margin-top: 30px;
+}
+
+.soft-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.soft-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.soft-icon {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soft-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.soft-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #202020;
+  text-align: center;
+}
+
+/*================================================================================
+  TECH SKILLS SECTION
+================================================================================*/
+.techskills-section {
+  margin-top: 30px;
+}
+
+.tech-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.tech-icon {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tech-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #202020;
+  text-align: center;
+}
+
+/*================================================================================
+  PROJECTS SECTION
+================================================================================*/
+.projects-section {
+  margin-top: 30px;
+}
+
+.project-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-link {
+  text-align: center;
+}
+
+.project-icon {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #202020;
+  text-align: center;
+}
+
+/*================================================================================
+  CERTIFICATIONS SECTION
+================================================================================*/
+.certifications-section {
+  margin-top: 30px;
+}
+
+.cert-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  max-width: 150px;
+}
+
+.cert-icon {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cert-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #202020;
+  text-align: center;
+}
+
+/*================================================================================
+  HOBBIES SECTION
+================================================================================*/
+.hobbies-section {
+  margin-top: 30px;
+}
+
+.hobby-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.hobby-item {
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hobby-item:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/*================================================================================
+  MEDIA QUERIES (MOBILE ADJUSTMENTS)
+================================================================================*/
+@media (max-width: 768px) {
+  /* PROFILE SECTION adjustments */
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+
+  /* Any flex container should stack vertically */
+  .lang-items,
+  .academic-items,
+  .soft-items,
+  .tech-items,
+  .project-items,
+  .cert-items,
+  .hobby-items {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 5px;
+  }
+
+  /* Shrink icons a bit on mobile */
+  .lang-icon,
+  .academic-icon,
+  .soft-icon,
+  .tech-icon,
+  .project-icon,
+  .cert-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Shrink labels a notch */
+  .lang-label,
+  .acad-name,
+  .acad-location,
+  .acad-result,
+  .soft-label,
+  .tech-label,
+  .project-label,
+  .cert-label {
+    font-size: 1.1rem;
+  }
+
+  /* Hobby text a bit smaller */
+  .hobby-item {
+    font-size: 1.1rem;
+    padding: 10px 16px;
+  }
+}
