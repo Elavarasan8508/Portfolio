@@ -1,3 +1,4 @@
+/* Portfolio.css - Modernized Version */
 body {
     margin: 0;
     padding: 0;
@@ -10,79 +11,101 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Satoshi', sans-serif; /* Modern system font */
 }
 
 .tran-box {
-    position: relative; /* Add this to make absolute positioning work relative to the box */
+    position: relative;
     background-color: rgba(0, 0, 0, 0.7);
     width: 90%;
     max-width: 600px;
     height: auto;
-    margin: 60px 20px 20px; /* Added top margin for social icons */
+    margin: 80px 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 20px 20px; /* Added top padding for social icons */
-    border-radius: 20px;
+    padding: 80px 20px 30px;
+    border-radius: 24px;
     text-align: center;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgba(79, 79, 79, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
 }
-
 
 .profile-img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 3px solid rgba(255, 255, 255, 0.3);
     margin: 20px 0;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.03);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 30px rgba(0, 247, 255, 0.673);
 }
 
 .name {
-    font-size: 2.5rem;
-    font-family: 'Pacifico', cursive;
-    font-weight: bold;
-    margin: 10px 0;
-    background: linear-gradient(45deg, #e9ccd3, #ffffff);
+    font-size: 3rem;
+    font-family:monospace, 'Satoshi', sans-serif;
+    font-weight: 700;
+    margin: 15px 0;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    animation: gradientShift 8s ease infinite;
+    text-transform: uppercase;
 }
 
 .tagline {
-    font-size: 1.2rem;
-    color: #ddd;
-    font-family: 'Arial', sans-serif;
-    animation: pulse 3s infinite ease-in-out;
-    margin: 10px 0;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-size: 1.3rem;
+    color: #fff;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    margin: 10px 0 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    position: relative;
 }
 
-/* Updated Social Icons Positioning */
+.tagline::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    margin: 15px auto;
+}
+
 .social {
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 20px;
+    gap: 25px;
     width: auto;
-    margin: 0;
     z-index: 10;
 }
 
 .social img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 28px;
+    height: 28px;
+    transition: all 0.3s ease;
+    filter: brightness(0.9);
 }
 
 .social img:hover {
-    transform: scale(1.2);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.2) translateY(-3px);
+    filter: brightness(1.2) drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
 }
 
 .btn-container {
@@ -91,57 +114,52 @@ body {
     align-items: center;
     width: 100%;
     margin-top: 20px;
+    gap: 15px;
 }
 
 .resume {
     width: 100%;
     max-width: 300px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px 0;
-    border-radius: 10px;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 14px 0;
+    border-radius: 12px;
     text-decoration: none;
-    font-family: 'Arial', sans-serif;
-    transition: transform 0.3s, background-color 0.3s;
-    margin: 10px 0;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    letter-spacing: 1px;
 }
 
-/* Media Queries for different screen sizes */
+.resume:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Responsive Design */
 @media (min-width: 600px) {
     .profile-img {
-        width: 250px;
-        height: 250px;
-    }
-    
-    .name {
-        font-size: 3rem;
-    }
-    
-    .tagline {
-        font-size: 1.5rem;
-    }
-    
-    .social {
-        gap: 10px;
-    }
-    
-    .social img {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .resume {
-        font-size: 1.5rem;
-        padding: 20px 0;
-    }
-}
-
-@media (min-width: 900px) {
-    .profile-img {
-        width: 350px;
-        height: 350px;
+        width: 220px;
+        height: 220px;
     }
     
     .name {
@@ -149,48 +167,55 @@ body {
     }
     
     .tagline {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     
     .social {
-        gap: 150px;
+        gap: 30px;
     }
     
     .social img {
-        width: 40px;
-        height: 40px;
+        width: 32px;
+        height: 32px;
     }
     
     .resume {
-        font-size: 2rem;
+        font-size: 1.2rem;
+        padding: 16px 0;
     }
 }
 
-/* Keep your existing pulse animation */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        color: #f4a7f2;
-        text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+@media (min-width: 900px) {
+    .tran-box {
+        max-width: 650px;
+        padding: 90px 30px 40px;
     }
-    25% {
-        transform: scale(1.1);
-        color: #fd9b8a;
-        text-shadow: 3px 5px 6px rgba(0, 0, 0, 0.4);
+    
+    .profile-img {
+        width: 240px;
+        height: 240px;
     }
-    50% {
-        transform: scale(1);
-        color: #f2e679;
-        text-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
+    
+    .name {
+        font-size: 4rem;
     }
-    75% {
-        transform: scale(0.9);
-        color: #9de8fc;
-        text-shadow: 3px 5px 6px rgba(0, 0, 0, 0.4);
+    
+    .tagline {
+        font-size: 1.6rem;
     }
-    100% {
-        transform: scale(1);
-        color: #f0819b;
-        text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    
+    .social {
+        gap: 40px;
+        top: 30px;
+    }
+    
+    .social img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .resume {
+        font-size: 1.3rem;
+        max-width: 350px;
     }
 }
