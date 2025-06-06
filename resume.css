@@ -1,5 +1,5 @@
 /*================================================================================
-  GLOBAL RESET & BASE STYLEs
+  GLOBAL RESET & BASE STYLES
 ================================================================================*/
 * {
   margin: 0;
@@ -34,6 +34,7 @@ body {
   background-color: #6d6d6d;
   padding: 40px 20px;
 }
+
 
 .profile-container {
   display: flex;
@@ -128,6 +129,7 @@ body {
   text-align: center;
 }
 
+
 /*================================================================================
   ACADEMICS SECTION
 ================================================================================*/
@@ -142,6 +144,7 @@ body {
   gap: 60px;
   flex-wrap: wrap;
   padding: 20px 10px;
+  margin-left: 38px;
 }
 
 .academic-item {
@@ -353,6 +356,7 @@ body {
 /*================================================================================
   HOBBIES SECTION
 ================================================================================*/
+
 .hobbies-section {
   margin-top: 30px;
 }
@@ -377,10 +381,12 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+
 .hobby-item:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
+
 
 /*================================================================================
   MEDIA QUERIES (MOBILE ADJUSTMENTS)
